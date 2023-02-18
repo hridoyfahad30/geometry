@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>GEOMETRY GENIUS</title>
+  </head>
+  <body>
+    <header>
+      <nav class="flex justify-between items-center bg-blue-100 px-8 py-6 my-6 mx-4 rounded-xl">
+        <div class="flex items-center">
+            <h1 class="sm: my-6 text-xl text-slate-500 font-semibold">
+                <span class="text-4xl font-semibold text-black">Interactive</span>
+                <br />
+                Geometry Genius
+              </h1>
+        </div>
+        <div class="md:block">
+          <a id="blogButton"
+            href="#"
+            class="ml-4 bg-blue-500 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-full"
+            >Blog</a
+          >
+        </div>
+      </nav>
+    </header>
+    
+    <main>
+      <section class="md:flex justify-center gap-10">
+        <div class="md:grid md:grid-cols-3 mb-6 gap-2">
+          <div id="triangleContainer"
+            class="border-2 text-center flex flex-col p-10 my-2 mx-2 rounded-lg"
+          >
+            <div class="h-60 flex items-center justify-center">
+              <img class="w-64 mb-8 p-6" src="./images/triangle.png" alt="" />
+            </div>
+            <h2 id="triangleH2" class="text-2xl font-semibold mb-4">Triangle</h2>
+            <h5 class="text-lg">Area (A) = 0.5 x b x h</h5>
+            <div class="py-4">
+              <input id="triangleInput1"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="b"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+              <input id="triangleInput2"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="h"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+            </div>
+            <p id="triangleErr" class="pb-2 text-lg text-red-600 font-semibold hidden">Please Input a Valid Number</p>
+            <button id="triangleCalculate"
+              class="bg-blue-500 hover:bg-blue-700 px-8 py-2 rounded-lg text-white text-lg font-semibold my-2"
+            >
+              Calculate
+            </button>
+          </div>
+          <div id="rectangleContainer"
+            class="border-2 text-center flex flex-col p-10 my-2 mx-2 rounded-lg"
+          >
+            <div class="h-60 flex items-center justify-center">
+              <img class="w-64 mb-8 p-6" src="./images/rectangle.png" alt="" />
+            </div>
+            <h2 id="rectangleH2" class="text-2xl font-semibold mb-4">Rectangle</h2>
+            <h5 class="text-lg">Area (A) = w x l</h5>
+            <div class="py-4">
+              <input id="rectangleInput1"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="w"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+              <input id="rectangleInput2"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="l"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+            </div>
+            <p id="rectangleErr" class="pb-2 text-lg text-red-600 font-semibold hidden">Please Input a Valid Number</p>
+            <button id="rectangleCalculate"
+              class="bg-blue-500 hover:bg-blue-700 px-8 py-2 rounded-lg text-white text-lg font-semibold my-2"
+            >
+              Calculate
+            </button>
+          </div>
+          <div id="parallelogramContainer"
+            class="border-2 text-center flex flex-col p-10 my-2 mx-2 rounded-lg"
+          >
+            <div class="h-60 flex items-center justify-center">
+              <img
+                class="w-64 mb-8 p-6"
+                src="./images/parallelogram.png"
+                alt=""
+              />
+            </div>
+            <h2 id="parallelogramH2" class="text-2xl font-semibold mb-4">Parallelogram</h2>
+            <h5 class="text-lg">Area (A) = b x h</h5>
+            <div class="py-4">
+              <input id="parallelogramInput1"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="b"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+              <input id="parallelogramInput2"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="h"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+            </div>
+            <p id="parallelogramErr" class="pb-2 text-lg text-red-600 font-semibold hidden">Please Input a Valid Number</p>
+            <button id="parallelogramCalculate"
+              class="bg-blue-500 hover:bg-blue-700 px-8 py-2 rounded-lg text-white text-lg font-semibold my-2"
+            >
+              Calculate
+            </button>
+          </div>
+          <div id="rhombusContainer"
+            class="border-2 text-center flex flex-col p-10 my-2 mx-2 rounded-lg"
+          >
+            <div class="h-60 flex items-center justify-center">
+              <img class="w-64 mb-8 p-6" src="./images/rhombus.png" alt="" />
+            </div>
+            <h2 id="rhombusH2" class="text-2xl font-semibold mb-4">Rhombus</h2>
+            <h5 class="text-lg">Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub></h5>
+            <div class="py-4">
+              <input id="rhombusInput1"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="d₁"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+              <input id="rhombusInput2"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="d₂"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+            </div>
+            <p id="rhombusErr" class="pb-2 text-lg text-red-600 font-semibold hidden">Please Input a Valid Number</p>
+            <button id="rhombusCalculate"
+              class="bg-blue-500 hover:bg-blue-700 px-8 py-2 rounded-lg text-white text-lg font-semibold my-2"
+            >
+              Calculate
+            </button>
+          </div>
+          <div id="pentagonContainer"
+            class="border-2 text-center flex flex-col p-10 my-2 mx-2 rounded-lg"
+          >
+            <div class="h-60 flex items-center justify-center">
+              <img class="w-64 mb-8 p-6" src="./images/pentagon.png" alt="" />
+            </div>
+            <h2 id="pentagonH2" class="text-2xl font-semibold mb-4">Pentagon</h2>
+            <h5 class="text-lg">Area (A) = 0.5 x p x b</h5>
+            <div class="py-4">
+              <input id="pentagonInput1"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="p"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+              <input id="pentagonInput2"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="b"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+            </div>
+            <p id="pentagonErr" class="pb-2 text-lg text-red-600 font-semibold hidden">Please Input a Valid Number</p>
+            <button id="pentagonCalculate"
+              class="bg-blue-500 hover:bg-blue-700 px-8 py-2 rounded-lg text-white text-lg font-semibold my-2"
+            >
+              Calculate
+            </button>
+          </div>
+          <div id="ellipseContainer"
+            class="border-2 text-center flex flex-col p-10 my-2 mx-2 rounded-lg"
+          >
+            <div class="h-60 flex items-center justify-center">
+              <img class="w-64 mb-8 p-6" src="./images/ellipse.png" alt="" />
+            </div>
+            <h2 id="ellipseH2" class="text-2xl font-semibold mb-4">Ellipse</h2>
+            <h5 class="text-lg">Area (A) = π x a x b</h5>
+            <div class="py-4">
+              <input id="ellipseInput1"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="a"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+              <input id="ellipseInput2"
+                class="bg-slate-200 w-20 rounded-lg px-4 py-2 text-lg font-semibold placeholder:text-slate-400 placeholder:text-lg placeholder:font-semibold"
+                type="number"
+                placeholder="b"
+              />
+              <label class="text-lg font-semibold px-2" for="cm">cm</label>
+            </div>
+            <p id="ellipseErr" class="pb-2 text-lg text-red-600 font-semibold hidden">Please Input a Valid Number</p>
+            <button id="ellipseCalculate"
+              class="bg-blue-500 hover:bg-blue-700 px-8 py-2 rounded-lg text-white text-lg font-semibold my-2"
+            >
+              Calculate
+            </button>
+          </div>
+        </div>
+        <div class="">
+          <div
+            class="text-center border-2 h-auto w-auto my-2 mx-2 py-10 px-2 rounded-lg"
+          >
+            <h3 class="text-2xl font-semibold underline py-4 mb-4">
+              Area Calculation
+            </h3>
+
+            <table class="table-auto mx-auto">
+              <thead>
+                <tr>
+                  <th class="px-1 py-2"></th>
+                  <th class="px-12 py-2"></th>
+                  <th class="px-14 py-2"></th>
+                </tr>
+              </thead>
+              <tbody id="calculationContainer">
+                
+              </tbody>
+            </table>
+            
+            
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- local js -->
+    <script src="./js/utlity.js"></script>
+    <script src="./js/blog.js"></script>
+    <script src="./js/dash.js"></script>
+  </body>
+</html>
